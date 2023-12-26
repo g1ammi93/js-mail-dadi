@@ -43,5 +43,47 @@ const result = `
 
 resultElement.innerHTML = result;
 
-}
-)
+})
+
+
+/* Esercizio 2
+
+-Invento una lista di mail
+-Chiedo all'utente la mail che vuole usare
+-Controllo che la mail sia nella lista
+-Stampo un messaggio di successo o di errore */
+
+const acceptedMail = ['pinco@pallino.it' , 'pippo@pluto.it' , 'pape@rino.it']
+const form = document.getElementById('form')
+const buttonMail = document.getElementById('buttonMail')
+const input = document.getElementById('input')
+const resultMail = document.getElementById('resultMail')
+
+//Click del bottone
+
+buttonMail.addEventListener('click' , function () {
+    const userMail = input.value.trim();
+    console.log(userMail)
+
+//Validazione
+
+    if(!userMail){
+        alert('non hai inserito nessuna mail')
+        return
+    }
+
+    let isAllowedMail = false
+
+    for(let i = 0; i < acceptedMail.length; i++) {
+console.log('mail controllata: ' , acceptedMail[i])
+console.log('mail utente: ', userMail);
+
+        if (userMail === acceptedMail[i]) {
+console.log('trovata')
+        }
+    }
+})
+
+
+
+
