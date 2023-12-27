@@ -80,9 +80,19 @@ console.log('mail utente: ', userMail);
 
         if (userMail === acceptedMail[i]) {
 console.log('trovata')
+isAllowedMail = true
         }
     }
-})
+
+    if(isAllowedMail){
+        buttonMail.classList.add('d-none')
+        input.classList.add('d-none')
+        resultElement.innerText = 'Email Accettata'
+    } else {
+        input.classList.add('is-invalid')
+        resultElement.innerText = 'Email rifiutata'
+    }
+});
 
 
 
