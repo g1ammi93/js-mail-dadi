@@ -74,6 +74,9 @@ buttonMail.addEventListener('click' , function () {
 
     let isAllowedMail = false
 
+
+    //controllo mail
+
     for(let i = 0; i < acceptedMail.length; i++) {
 console.log('mail controllata: ' , acceptedMail[i])
 console.log('mail utente: ', userMail);
@@ -83,6 +86,8 @@ console.log('trovata')
 isAllowedMail = true
         }
     }
+
+//Risultato
 
     if(isAllowedMail){
         buttonMail.classList.add('d-none')
